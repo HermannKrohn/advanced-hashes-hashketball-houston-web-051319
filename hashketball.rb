@@ -201,4 +201,12 @@ def player_stats(inPlayerName)
   end
 end
   
+def big_shoe_rebounds 
+  playerLargestShoe = ""
+  largestShoeSize = nil
+  game_hash.each do |location, team_data|
+    team_data[:players].each do |playerName, playerData|
+      if largestShoeSize == nil
+        playerLargestShoe = playerName
+        largestShoeSize = playerdata
 puts player_stats("Alan Anderson")
