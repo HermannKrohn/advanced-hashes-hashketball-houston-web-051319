@@ -118,52 +118,38 @@ def game_hash
 end
 
 def num_points_scored(name)
-  player = find_the_player(name)
-  player.fetch(:points)
+  points = 0 
+  game_hash.each do |location, team_data|
+    team_data.each do |attribute, data|
+      if attribute == :players
+        data.each do |playerName, playerData|
+         # binding.pry
+          if playerName == name 
+            #binding.pry
+            points = playerData[:points]
+            binding.pry
+          end
+        end
+      end
+    end
+  end
+  points
 end
 
-def shoe_size(name)
-  player = find_the_player(name)
-  player.fetch(:shoe)
+def good_practices
+  game_hash.each do |location, team_data|
+    #are you ABSOLUTELY SURE what 'location' and 'team data' are? use binding.pry to find out!
+    #binding.pry
+      team_data.each do |attribute, data|
+        #are you ABSOLUTELY SURE what 'attribute' and 'team data' are? use binding.pry to find out!
+        binding.pry
+ 
+        #what is 'data' at each loop through out .each block? when will the following line of code work and when will it break?
+        data.each do |data_item|
+            binding.pry
+      end
+    end
+  end
 end
 
-def team_colors(team_name)
-  team = find_the_team(team_name)
-  team.fetch(:colors)
-end
-
-def team_names
-  teams.map{|t| t.fetch(:team_name)}
-end
-
-def player_numbers(team_name)
-  find_the_team(team_name)[:players].map{ |player_name, stats| stats[:number] }
-end
-
-def player_stats(player_name)
-  find_the_player(player_name)
-end
-
-def big_shoe_rebounds
-  player_biggest_shoe_size.fetch(:rebounds)
-end
-
-def teams
-  game_hash.values
-end
-
-def players
-  game_hash[:home][:players].merge(game_hash[:away][:players])
-end
-
-def find_the_team(team_name)
-  teams.find {|team| team.fetch(:team_name) == team_name}
-end
-
-def find_the_player(name)
-  players.fetch(name)
-end
-
-def player_biggest_shoe_size
-  players.max_by{|player, stats| stats.fetch(:shoe)}[1]
-end
+num_points_scored("Bismak Biyombo")
