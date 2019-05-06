@@ -201,4 +201,4 @@ def player_stats(inPlayerName)
   end
 end
   
-puts player_numbers("Charlotte Hornets")
+puts player_stats("Alan Anderson")
