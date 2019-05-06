@@ -152,4 +152,4 @@ def good_practices
   end
 end
 
-num_points_scored("Bismak Biyombo")
+puts num_points_scored("Bismak Biyombo")
