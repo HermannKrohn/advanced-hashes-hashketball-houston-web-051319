@@ -167,3 +167,5 @@ def team_colors(teamName)
   end
   teamColorArr
 end
+
+puts team_colors()
