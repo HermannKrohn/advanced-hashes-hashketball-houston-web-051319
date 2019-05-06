@@ -136,5 +136,21 @@ def num_points_scored(name)
   points
 end
 
-
-
+def shoe_size(name)
+  shoeSize = 0 
+  game_hash.each do |location, team_data|
+    team_data.each do |attribute, data|
+      if attribute == :players
+        data.each do |playerName, playerData|
+         # binding.pry
+          if playerName == name 
+            #binding.pry
+            shoeSize = playerData[:shoe]
+            #binding.pry
+          end
+        end
+      end
+    end
+  end
+  shoeSize
+end
