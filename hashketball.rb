@@ -167,4 +167,5 @@ def team_colors(teamName)
   teamColorArr
 end
 
+def team_names 
 puts team_colors("Brooklyn Nets")
