@@ -182,10 +182,12 @@ end
 def player_numbers(teamName)
   numbersArr = []
   game_hash.each do |location, team_data|
-    team_data[:players].each do |playerName, playerData|
-      numbersArr << playerData[:number]
+    if team_data[:team_name] == teamName
+      team_data[:players].each do |playerName, playerData|
+        numbersArr << playerData[:number]
+      end
     end
   end
   numbersArr
 end
-puts team_names
+puts player_numbers("Charlotte Hornets")
