@@ -162,6 +162,7 @@ def team_colors(teamName)
       if data[attribute] == teamName
         data[:colors].each do |color|
           teamColorArr << color
+        end
       end
     end
   end
