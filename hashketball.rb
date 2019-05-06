@@ -158,11 +158,9 @@ end
 def team_colors(teamName)
   teamColorArr = []
   game_hash.each do |location, team_data|
-    team_data.each do |attribute, data|
-      if team_data[attribute] == teamName
-        data[:colors].each do |color|
-          teamColorArr << color
-        end
+    if team_data[:team_name] == teamName
+      team_data[:colors].each do |color|
+        teamColorArr << color
       end
     end
   end
