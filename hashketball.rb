@@ -218,7 +218,6 @@ def big_shoe_rebounds
       end
     end
   end
-  puts playerLargestShoe
   numOfRebounds
 end
 puts big_shoe_rebounds
