@@ -127,7 +127,7 @@ def num_points_scored(name)
           if playerName == name 
             #binding.pry
             points = playerData[:points]
-            binding.pry
+            #binding.pry
           end
         end
       end
