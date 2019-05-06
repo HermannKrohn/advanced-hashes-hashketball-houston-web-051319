@@ -178,4 +178,4 @@ def team_names
   end
   teamArr
 end
-puts team_colors("Brooklyn Nets")
+puts team_names
