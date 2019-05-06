@@ -155,4 +155,6 @@ def shoe_size(name)
   shoeSize
 end
 
-puts shoe_size("DeSagna Diop")
+def team_colors(teamName)
+  game_hash.each do |location, team_data|
+    team_data.each do |attribute, data|
