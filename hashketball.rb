@@ -154,3 +154,5 @@ def shoe_size(name)
   end
   shoeSize
 end
+
+puts shoe_size("Bismack Biyombo")
