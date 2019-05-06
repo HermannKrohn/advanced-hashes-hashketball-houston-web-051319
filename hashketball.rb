@@ -190,4 +190,15 @@ def player_numbers(teamName)
   end
   numbersArr
 end
+
+def player_stats(inPlayerName)
+  game_hash.each do |location, team_data|
+    team_data[:players].each do |playerName, playerStats|
+      if playerName == inPlayerName
+        return playerStats
+      end
+    end
+  end
+end
+  
 puts player_numbers("Charlotte Hornets")
