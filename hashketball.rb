@@ -137,7 +137,6 @@ def num_points_scored(name)
 end
 
 def shoe_size(name)
-  shoeSize = 0 
   game_hash.each do |location, team_data|
     team_data.each do |attribute, data|
       if attribute == :players
@@ -155,4 +154,3 @@ def shoe_size(name)
   shoeSize
 end
 
-puts shoe_size("Bismak Biyombo")
