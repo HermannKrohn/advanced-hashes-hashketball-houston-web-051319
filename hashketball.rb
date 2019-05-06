@@ -167,5 +167,15 @@ def team_colors(teamName)
   teamColorArr
 end
 
-def team_names 
+def team_names
+  teamArr = []
+  game_hash.each do |location, team_data|
+    team_data.each do |key, value|
+      if key == :team_names
+        teamArr << value
+      end
+    end
+  end
+  teamArr
+end
 puts team_colors("Brooklyn Nets")
