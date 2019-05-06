@@ -171,7 +171,7 @@ def team_names
   teamArr = []
   game_hash.each do |location, team_data|
     team_data.each do |key, value|
-      if key == :team_names
+      if key == :team_name
         teamArr << value
       end
     end
