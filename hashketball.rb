@@ -220,4 +220,4 @@ def big_shoe_rebounds
   end
   numOfRebounds
 end
-puts player_stats("Alan Anderson")
+puts big_shoe_rebounds
