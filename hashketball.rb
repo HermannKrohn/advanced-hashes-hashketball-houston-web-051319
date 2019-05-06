@@ -168,4 +168,4 @@ def team_colors(teamName)
   teamColorArr
 end
 
-puts team_colors()
+puts team_colors("Brooklyn Nets")
